@@ -30,8 +30,8 @@ async function fetchBearerToken() {
     },
     body: new URLSearchParams({
       'grant_type': 'client_credentials',
-      'client_id': 'PAR_datacup_efe3f37d20bc6df7e747bef633dc562daaab93a8bcd45688fd48bccbc08803b6',
-      'client_secret': 'ef735490391fc3d6d54de69694a161a1f8184a47016512117ed0a22b8be98277',
+      'client_id': process.env.FRANCE_TRAVAIL_API_CLIENT_ID,
+      'client_secret': process.env.FRANCE_TRAVAIL_API_CLIENT_SECRET,
       'scope': 'api_offresdemploiv2 o2dsoffre api_rome-fiches-metiersv1 nomenclatureRome api_rome-competencesv1 api_rome-metiersv1'
     })
   };
