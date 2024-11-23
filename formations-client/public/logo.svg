@@ -1,0 +1,38 @@
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2980B9"/>
+      <stop offset="100%" style="stop-color:#3498DB"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <style>
+    .text { 
+      font-family: 'Poppins', sans-serif; 
+      font-size: 26px; 
+      font-weight: 600;
+      fill: #2C3E50;
+      filter: url(#shadow);
+    }
+    .book { fill: url(#gradientBlue); }
+    .pages { fill: #ffffff; }
+    .icon { filter: url(#shadow); }
+  </style>
+
+  <!-- Livre moderne -->
+  <g class="icon" transform="translate(-20, 0)">
+    <path class="book" d="M25 10 C25 8 27 5 30 5 L60 5 C63 5 65 8 65 10 L65 40 C65 42 63 45 60 45 L30 45 C27 45 25 42 25 40 L25 10 Z"/>
+    <path class="pages" d="M45 8 Q55 25 45 42" stroke="#ffffff" stroke-width="2"/>
+    <path class="pages" d="M42 8 Q52 25 42 42" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <!-- Icône de crayon -->
+    <path fill="#2C3E50" d="M52 15 L58 21 L48 31 L42 25 Z"/>
+    <path fill="#E74C3C" d="M40 27 L42 25 L48 31 L46 33 Z"/> 
+  </g>
+
+  <!-- Texte avec style moderne -->
+  <text x="60" y="32" class="text">Formations</text>
+</svg>

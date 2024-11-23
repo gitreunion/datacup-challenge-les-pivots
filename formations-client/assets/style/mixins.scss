@@ -1,0 +1,56 @@
+@use 'vars' as *;
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Ombres
+@mixin card-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Boutons
+@mixin button-primary {
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary-blue;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: $font-secondary;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-blue;
+  }
+}
+
+// Media queries
+@mixin responsive($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin card-shadow-hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+// Variables pour les breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
